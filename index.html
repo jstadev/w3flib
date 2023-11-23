@@ -11,22 +11,34 @@
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>Web3 Foundation Library</title>
+	
 </head>
 <body>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<div class="stat-container">
+				<h1 style="margin: 20px 0; font-size: 24px; color: #fff; font-weight: 900;">Grants by Category</h1>
+				<div class="stat">stat</div>
+				<div class="stat">stat</div>
+				<div class="stat">stat</div>
+				<div class="stat">stat</div>
+				<div class="stat">stat</div>
+				<div class="stat">stat</div>
+				<div class="stat">stat</div>
+				<div class="stat">stat</div>
+			</div>
+		</div>
+	  </div>
+	  
+
 	<div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
 	<header class="cd-header">
 		<h1>Web3 Foundaition Grants</h1>
 		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus facilis vero quis, voluptatibus odio tempora sapiente quae dolorem dolor omnis asperiores in! Mollitia ullam aspernatur obcaecati, sit perspiciatis sed maxime.</p>
-	
-		<div class="stat-container">
-			<div class="stat">stat</div>
-			<div class="stat">stat</div>
-			<div class="stat">stat</div>
-			<div class="stat">stat</div>
-			<div class="stat">stat</div>
-		</div>
 	</header>
 
 	
@@ -162,5 +174,14 @@
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mixitup.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script>
+	function openNav() {
+	  document.getElementById("myNav").style.width = "100%";
+	}
+	
+	function closeNav() {
+	  document.getElementById("myNav").style.width = "0%";
+	}
+	</script>
 </body>
 </html>
