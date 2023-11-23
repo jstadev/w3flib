@@ -295,11 +295,12 @@ xgallery
   background-color: rgb(217, 217, 217);
   min-height: 200px;
   box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
--webkit-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
--moz-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
-width: 24%;
-margin: 0 auto;
-margin-top: 10px;
+  -webkit-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
+  -moz-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
+  width: 24%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
 }
 .cd-gallery li.gap {
   /* used in combination with text-align: justify to align gallery elements */
