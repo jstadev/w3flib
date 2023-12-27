@@ -1,187 +1,185 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en" >
 
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	
-	<title>Web3 Foundation Library</title>
-	
+<head>  
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,600;0,800;1,400&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ&display=swap");
+
+body{
+	background-image: url('../bg.png');
+	background-size: cover;
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #001b47;
+  mix-blend-mode: overlay;
+}
+.text,
+.social {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.4em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+  background: #E6007A;
+  transition: 0.5s;
+}
+
+.social {
+  right: 38px;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 798px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+}
+</style>
+  
+  
 </head>
-<body>
-	<span style="font-size:30px;cursor:pointer; position: absolute; right: 0; margin: 10px; z-index: 1000;" onclick="openNav()">&#9776;</span>
-	<div id="myNav" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<div class="overlay-content">
-			<div class="stat-container">
-				<h1 style="margin: 20px 0; font-size: 24px; color: #fff; font-weight: 900;">Grants by Category</h1>
-				<div class="stat">stat</div>
-				<div class="stat">stat</div>
-				<div class="stat">stat</div>
-				<div class="stat">stat</div>
-				<div class="stat">stat</div>
-				<div class="stat">stat</div>
-				<div class="stat">stat</div>
-				<div class="stat">stat</div>
-			</div>
-		</div>
-	  </div>
-	  
 
-	<div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
-	<header class="cd-header">
-		<h1>Web3 Foundaition Grants</h1>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus facilis vero quis, voluptatibus odio tempora sapiente quae dolorem dolor omnis asperiores in! Mollitia ullam aspernatur obcaecati, sit perspiciatis sed maxime.</p>
-	</header>
+<body translate="no">
+  <section class="showcase">
+  <header>
+    <h2 class="logo"><img src="polkadot.png" width="80px" height="80px">beta</h2>
+  </header>
 
-	
-	<main class="cd-main-content">
-		<div class="cd-tab-filter-wrapper">
-			<div class="cd-tab-filter">
-				<ul class="cd-filters">
-					<li class="placeholder"> 
-						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
-					</li> 
-					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
-					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Wave 19</a></li>
-					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Wave 18</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 17</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 16</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 15</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 14</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 13</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 12</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 11</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 10</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 9</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 8</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 7</a></li>
-					<!-- <li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 6</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 5</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 4</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 3</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 2</a></li>
-					<li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Wave 1</a></li> -->
+  <!-- <video src="https://media.giphy.com/media/gIODGWDBuG5AWlUExJ/giphy.mp4" muted loop autoplay></video> -->
 
-				</ul> <!-- cd-filters -->
-			</div> <!-- cd-tab-filter -->
-		</div> <!-- cd-tab-filter-wrapper -->
+  <div class="overlay"></div>
 
-		<section class="cd-gallery">
-			<ul>
-				<li class="mix color-1 check1 radio2 option3"><img src="img/19.jpg" alt="Image 1">
-				<span></span>
-				</li>
-				<li class="mix color-2 check2 radio2 option2"><img src="img/19.jpg" alt="Image 2"></li>
-				<li class="mix color-1 check3 radio3 option1"><img src="img/19.jpg" alt="Image 3"></li>
-				<li class="mix color-3 check3 radio2 option4"><img src="img/19.jpg" alt="Image 4"></li>
-				<li class="mix color-1 check1 radio3 option2"><img src="img/18.jpg" alt="Image 5"></li>
-				<li class="mix color-2 check2 radio3 option3"><img src="img/18.jpg" alt="Image 6"></li>
-				<li class="mix color-2 check2 radio2 option1"><img src="img/18.jpg" alt="Image 7"></li>
-				<li class="mix color-1 check1 radio3 option4"><img src="img/17.jpg" alt="Image 8"></li>
-				<li class="mix color-2 check1 radio2 option3"><img src="img/17.jpg" alt="Image 9"></li>
-				<li class="mix color-1 check3 radio2 option4"><img src="img/17.jpg" alt="Image 10"></li>
-				<li class="mix color-1 check3 radio3 option2"><img src="img/17.jpg" alt="Image 11"></li>
-				<li class="mix color-2 check1 radio3 option1"><img src="img/17.jpg" alt="Image 12"></li>
-				<li class="gap"></li>
-				<li class="gap"></li>
-				<li class="gap"></li>
-			</ul>
-			<div class="cd-fail-message">No results found</div>
-		</section> 
+  <div class="text">
+    <h2>web3 foundation grants</h2>
+    <h3>tracking library</h3>
+    <p>The Web3 Foundation Library is a specialized resource dedicated to providing valuable data and information related to projects funded by the Web3 Foundation. A hub for insights into the blockchain and decentralized technology ecosystem, this library serves as a comprehensive repository of knowledge for stakeholders, developers, and enthusiasts. </p><br>
+    <a href="grants.html">Explore</a>
+  </div>
 
-		<div class="cd-filter">
-			<form>
-				<div class="cd-filter-block">
-					<h4>Search</h4>
-					
-					<div class="cd-filter-content">
-						<input type="search" placeholder="Search...">
-					</div> <!-- cd-filter-content -->
-				</div> <!-- cd-filter-block -->
-
-				<div class="cd-filter-block">
-					<h4>Grant Types</h4>
-
-					<ul class="cd-filter-content cd-filters list">
-						<li>
-							<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
-			    			<label class="checkbox-label" for="checkbox1">Smart Contracts</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
-							<label class="checkbox-label" for="checkbox2">Wallets</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
-							<label class="checkbox-label" for="checkbox3">Research</label>
-						</li>
-					</ul> <!-- cd-filter-content -->
-				</div> <!-- cd-filter-block -->
-
-				<!-- <div class="cd-filter-block">
-					<h4>Select</h4>
-					
-					<div class="cd-filter-content">
-						<div class="cd-select cd-filters">
-							<select class="filter" name="selectThis" id="selectThis">
-								<option value="">Choose an option</option>
-								<option value=".option1">Option 1</option>
-								<option value=".option2">Option 2</option>
-								<option value=".option3">Option 3</option>
-								<option value=".option4">Option 4</option>
-							</select>
-						</div>
-					</div> 
-				</div>  -->
-
-				<!-- <div class="cd-filter-block">
-					<h4>Radio buttons</h4>
-
-					<ul class="cd-filter-content cd-filters list">
-						<li>
-							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
-							<label class="radio-label" for="radio1">All</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
-							<label class="radio-label" for="radio2">Choice 2</label>
-						</li>
-
-						<li>
-							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
-							<label class="radio-label" for="radio3">Choice 3</label>
-						</li>
-					</ul> 
-				</div> -->
-			</form>
-
-			<a href="#0" class="cd-close">Close</a>
-		</div> <!-- cd-filter -->
-
-		<a href="#0" class="cd-filter-trigger">Filters</a>
-	</main> <!-- cd-main-content -->
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/jquery.mixitup.min.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script>
-	function openNav() {
-	  document.getElementById("myNav").style.width = "100%";
-	}
-	
-	function closeNav() {
-	  document.getElementById("myNav").style.width = "0%";
-	}
-	</script>
+  <ul class="social">
+    <li><a href="#"><img src="https://img.icons8.com/color/2x/github.png" width="42px" height="42px"></a></li>
+    <!-- <li><a href="#"><img src="https://img.icons8.com/color/2x/instagram-new--v1.png" width="42px" height="42px"></a></li> -->
+    <li><a href="#"><img src="https://img.icons8.com/color/2x/twitter--v1.png" width="42px" height="42px"></a></li>
+    <!-- <li><a href="#"><img src="https://img.icons8.com/color/2x/mailbox-closed-flag-down.png" width="42px" height="42px"></a></li> -->
+  </ul>
+</section>
+  
+  
+  
 </body>
+
 </html>
