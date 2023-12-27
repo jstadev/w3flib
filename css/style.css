@@ -95,6 +95,7 @@ Main Components
   top: 0;
   left: 0;
   width: 100%;
+  /* overflow-x: scroll; */
 }
 .cd-main-content.is-fixed .cd-gallery {
   padding-top: 76px;
@@ -140,6 +141,7 @@ xtab-filter
   -webkit-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
   -moz-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
   border-bottom: 1px solid gray;
+  overflow-x: auto;
   
 }
 .cd-tab-filter-wrapper:after {
