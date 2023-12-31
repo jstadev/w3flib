@@ -23,10 +23,11 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #000000;
   /* background-color: rgb(75, 75, 75); */
- background-image: url('../bg-grapnts.jpg');
+ background-image: url('../bg.jpg');
  background-size: cover;
  background-repeat: no-repeat;
  background-attachment: fixed;
+ background-color: black;
 
   
 
@@ -60,6 +61,13 @@ Main Components
   font-weight: 300;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.user{
+  display: inline-block !important;
+  max-width: 20px;
+  margin-bottom: -5px;
+  margin-right: 5px;
 }
 
 .cd-filters{
@@ -301,11 +309,17 @@ xgallery
   /* padding: 10px; */
   /* background-color: rgb(40, 40, 40); */
   background: linear-gradient(0deg, #161616 0%, #adadad 100%);
-  min-height: 291px;
+  /* min-height: 291px; */
   box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
 -webkit-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
 -moz-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
-border: 1px solid gray;
+border: 2px solid transparent;
+border-radius: 5px;
+background: linear-gradient(to right, black, #292626), linear-gradient(to right, #e6007a , #552bbf);
+background-clip: padding-box, border-box;
+background-origin: padding-box, border-box;
+
+
 }
 
 .stat-container{
@@ -592,6 +606,12 @@ xcustom form elements
   background-color: #e6e6e6;
   /* prevent jump - ios devices */
   font-size: 1.6rem !important;
+
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: linear-gradient(to right, rgb(255, 255, 255), #ffffff), linear-gradient(to right, #e6007a , #552bbf);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
 }
 .cd-filter-block input[type='search']::-webkit-search-cancel-button {
   display: none;
