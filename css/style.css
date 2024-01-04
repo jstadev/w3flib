@@ -309,7 +309,7 @@ xgallery
   /* padding: 10px; */
   /* background-color: rgb(40, 40, 40); */
   background: linear-gradient(0deg, #161616 0%, #adadad 100%);
-  /* min-height: 291px; */
+  min-height: 291px;
   box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
 -webkit-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
 -moz-box-shadow: 0px 1px 25px -6px rgba(0,0,0,0.63);
